@@ -1,0 +1,23 @@
+<ion-view view-title="Contacts">
+  <ion-content>
+  <div style="text-align: center;margin:10px;">
+   <button class="button  button-royal" ng-click="getAllContacts()">
+  {{button}}
+</button>
+
+</div>
+<div class="list">
+
+<div class="item item-button-right" ng-repeat="x in contacts">
+     <h2>{{x.displayName}}
+      <p>{{x.phoneNumbers[0]['value']}}</p></h2>
+     
+    <button class="button button-positive">
+      <a href="tel:{{x.phoneNumbers[0]['value']}}" class="icon ion-ios-telephone"></a>
+    </button>
+  </div>
+
+</div>
+
+  </ion-content>
+</ion-view>
